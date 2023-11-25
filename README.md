@@ -5,7 +5,7 @@ Predict Clicked Ads Customer using Machine Learning
 A company wants to know the effectiveness of the advertisements they broadcast. This is important for the company to know how successful the advertisement being marketed is so that it can attract customers to see the advertisement. By processing historical advertisement data and finding insights and patterns that occur, can help companies determine marketing targets. The focus of this case is to create a machine learning classification model that functions to determine the right target customers.
 
 # Scope of problem
-
+The project involves developing a machine learning system to create a classification model aiming to identify the most suitable target customers based on historical advertisement data. This model will analyze patterns and insights from past advertisements to gauge their effectiveness in attracting customers. The primary objective is to assist the company in understanding the success of their marketing efforts and improve their ability to target the right audience for their advertisements.
 
 
 # Data
