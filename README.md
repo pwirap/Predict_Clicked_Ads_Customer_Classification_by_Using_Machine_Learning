@@ -22,22 +22,36 @@ A company wants to know the effectiveness of the advertisements they broadcast. 
 4. Delete the following features: "Unnamed Features: 0" since it doesn't provide any information, "year" as it contains only one unique value, "Timestamp" because feature engineering has already been performed, and "city," "province," and "category" due to the high number of unique values which would lead to the curse of dimensionality when one-hot encoding is applied.
 5. Split with 70% Data Training and 30% Data Testing
 6. Outliers will be removed in the Income Area in Data Train using Z-Scores (Before = 700 data, After = 699 data)
+
+![Picture6](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/ebe36229-4cc9-47b3-b299-7ee8e4d70ed0)
+
 7. Data Training and Data Test has Class Balanced
 
 # Data Analysis
 ## Statistical Analysis
+
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/ee723c39-b24b-4a83-a314-5bb6e5482036)
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/badc14fe-057e-49ba-8bf8-f6306a3be741)
+
 1. The contents of all columns are reasonable
 2. The maximum/minimum value is not too far from the mean/median
 3. The mean and median are not too far apart
 4. The contents of each unique value are reasonable
 
 ## Univariate Analysis - Numerical
+
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/23455880-e32f-4157-8431-d26110c7b99a)
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/15e65aea-4e27-49f0-b23b-3041a330372c)
+
 1. There are outliers in the income feature area
 2. Feature Area Income distribution is slightly Negative Skew
 3. The Daily Time Spent distribution feature includes bimodal distribution
 4. Feature Age distribution is slightly positive Skew
 5. The daily internet usage feature has a normal distribution
 6. Characteristics of customers who click on ads
+
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/27eda458-a03c-4426-9a26-17e04888e6c4)
+
 7. Characteristics of customers who click on ads
 - Daily Time Spent on site = 40 – 60
 - Age = 35 – 50
@@ -54,16 +68,27 @@ A company wants to know the effectiveness of the advertisements they broadcast. 
 12. Customers who click on ads tend to have lower daily internet usage than those who don't click on ads
 
 ## Univariate Analysis - Categorical
+
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/61151602-16be-46b6-9349-4d30fe1f384d)
+
+
 1. There are more women than men, although not much different
 2. The largest province is DKI Jakarta
 3. Automotive is the highest category, but not much different from other categories
 4. The largest cities are Surabaya and Bandung
+
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/30fc5c79-db60-458f-ad90-e5733324ab4d)
+
 5. If grouped by gender, women click more on Ads than men
 6. If grouped by city, some cities such as Cimahi and Serang tend to click on ads compared to other cities
 7. If grouped by province, South Kalimantan and Banten tend to click on ads compared to other provinces
 8. If grouped by category, Finance and Fashion tend to click on ads compared to other categories
 
 ## Bivariate Analysis
+
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/df9f2d80-18f2-4fe3-bfd8-87a58c87061c)
+![image](https://github.com/pwirap/Predict_Clicked_Ads_Customer_Classification_by_Using_Machine_Learning/assets/99533745/7d63c138-4dc7-422e-beac-a8e353229b00)
+
 1. Customers who click on ads tend to be more mature with daily time spent on the site, daily internet usage, and low area income
 2. It can be concluded that the longer the customer, the lower the daily time spent on the site, daily internet usage and area income, and vice versa
 3. There are 4 features that have a high correlation with the target (Clicked on Ad)
@@ -98,14 +123,14 @@ Among the various machine learning models that have been explored, Random Forest
 
 # Hyperparameter Tuning
 
-Best n_estimators: 1600
-Best bootstrap: False
-Best criterion: gini
-Best max_depth: 6
-Best min_samples_split: 82
-Best min_samples_leaf: 55
-Best max_features: auto
-Best n_jobs: -1
+1. Best n_estimators: 1600
+2. Best bootstrap: False
+3. Best criterion: gini
+4. Best max_depth: 6
+5. Best min_samples_split: 82
+6. Best min_samples_leaf: 55
+7. Best max_features: auto
+8. Best n_jobs: -1
 
 Using RandomizedSearchCV, table besides show the best hyperparameter tuning
 
